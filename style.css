@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* colors */
+  --white: #fff;
+  --dark: #222;
+  --font-primary: 'Mohave', sans-serif;
+
+  /* feature */
+  --spacing: 1.5px;
+  --radiusFull: 50%;
+  --radius: 0.5rem;
+
+  /* layout */
+  --fixed-width: 600px;
+  --max-width: 1170px;
+  --small-width: 450px;
+}
+
+body {
+  background: #ddd;
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.25rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* for center */
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 5rem 0;
+}
+
+.container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+}
+
+.review {
+  background: var(--dark);
+  color: var(--white);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 2rem auto;
+}
+
+.person-img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.image-container::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 50%;
+  top: -0.15rem;
+  right: -0.15rem;
+}
+
+/* info review */
+.info-review h4 {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 2rem 0;
+}
+
+.info-review h4::before {
+  position: absolute;
+  content: '\f10d';
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  top: -2rem;
+  left: 0;
+}
+
+.info-review h4::after {
+  position: absolute;
+  content: '\f10e';
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  bottom: -2rem;
+  right: 0;
+}
+
+.rating {
+  color: rgb(255, 72, 0);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.info-review h5 {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+/* button */
+.prev-btn,
+.next-btn {
+  border-color: transparent;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.25rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
